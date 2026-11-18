@@ -1,0 +1,175 @@
+body{
+    margin: 0;
+    background-color: white;
+}
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 1fr;
+}
+.sidebar{
+    margin: 5px;
+    border-radius: 25px;
+    background-color: navy;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 25% 1fr;
+    height: 100%;
+}
+.content{
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 30px;
+}
+.full{
+    font-size: 50px;
+    align-self: center;
+    justify-self: center;
+    color: white;
+    background-color: orange;
+    border-radius: 20px;
+    padding: 10px;
+}
+.middle{
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+.middle div{
+    align-self: center;
+    justify-self: center;
+}
+.last{
+    justify-self: center;
+    align-self: center;
+    font-size: 10px;
+    border-radius: 5px;
+    background-color: orange;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.img1{
+    height: 400px;
+    width: 350px;
+}
+.img2{
+    height: 400px;
+    width: 550px;
+}
+.logo{
+    font-size: 50px;
+    align-self: center;
+    justify-self: center;
+}
+.menu{
+    display: grid;
+    align-items: center;
+    padding: 0px 20px;
+}
+.menu div{
+    color: black;
+    background-color: orange;
+    border-radius: 10px;
+    padding: 10px 30px;
+}
+.menu div:hover{
+    color: black;
+    background-color: darkorange;
+    border-radius: 10px;
+    padding: 11px 32px;
+    cursor: pointer;
+}
+
+/* =========================================================
+   TABLET (screens 1024px wide or smaller)
+   ========================================================= */
+@media (max-width: 1024px){
+    .container{
+        height: auto;
+        min-height: 100vh;
+        grid-template-columns: 200px 1fr;
+    }
+    .sidebar{
+        grid-template-rows: 120px 1fr;
+    }
+    .logo{
+        font-size: 30px;
+    }
+    .menu div,
+    .menu div:hover{
+        padding: 10px 15px;
+    }
+
+    .content{
+        height: auto;
+        grid-template-rows: auto 1fr auto;
+    }
+    .full{
+        font-size: 36px;
+        text-align: center;
+        margin: 20px;
+    }
+    .middle{
+        gap: 15px;
+        padding: 0px 15px;
+    }
+
+    .img1,
+    .img2{
+        width: 100%;
+        height: auto;
+    }
+    .last{
+        font-size: 13px;
+        margin-right: 6px;
+    }
+}
+
+/* =========================================================
+   PHONE (screens 768px wide or smaller)
+   ========================================================= */
+@media (max-width: 768px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+    }
+    .sidebar{
+        grid-template-rows: auto auto;
+        border-radius: 9px;
+    }
+    .logo{
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .menu{
+        font-size: 12px;
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        padding: 10px;
+        gap: 10px;
+    }
+    .menu div{
+        border-radius: 5px;
+        padding: 2px 2px 2px 10px;
+    }
+
+    .content{
+        grid-template-rows: auto auto auto;
+    }
+    .full{
+        font-size: 20px;
+        margin: 15px;
+    }
+    .middle{
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 5px 15px;
+    }
+    .last{
+        font-size: 10px;
+        text-align: center;
+        margin: 15px;
+    }
+}
